@@ -13,6 +13,5 @@ class MovieclassifierConfig(AppConfig):
              'rb'))
 
     def ready(self):
-        print('call ready!')
         from movieclassifier.update import update_model
         self.clf = update_model(self.clf)
