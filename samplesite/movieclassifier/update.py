@@ -8,7 +8,6 @@ from .models import Review
 def update_model(model, batch_size=10000):
     all_feedback = Review.objects.all()
     size = all_feedback.count()
-    print(size)
     init = 0
     while init < size:
         useddatanum = min(size, init + batch_size)
